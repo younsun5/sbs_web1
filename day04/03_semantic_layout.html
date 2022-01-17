@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱 요소 - 레이아웃</title>
+<!-- 폰트 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+
+    body {
+        font-family:  'Noto Sans KR', sans-serif;
+    }
+
+
+    header {
+        background-color: lightgray;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+
+    nav {
+        float: left;
+        width: 20%;
+        height: 300px;
+        background-color: #339999;
+        padding: 20px;
+    }
+
+
+    article {
+        float: left;
+        padding: 20px;
+        width: 80%;
+        background-color: #f1f1f1;
+        height: 300px;
+    }
+
+
+    section::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+
+    footer {
+        background-color: #ffcc00;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+    }
+        /* 반응형 적용 - 가로사이즈 600px 이하*/
+        @media screen and (max-width:600px){
+            nav, 
+            article {
+                width: 100px;
+                height: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>semantic 요소를 이용한 레이아웃</h1>
+    <header>
+        <h2>HEADER</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">menu 001</a></li>
+                <li><a href="#">menu 002</a></li>
+                <li><a href="#">menu 003</a></li>
+                <li><a href="#">menu 004</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>sbs 아카데미</h1>
+            <p>
+                청춘의 봄바람을 같이, 불어 끓는 곳이 속에 이것을 바로 황금시대다. 날카로우나 풍부하게 예수는 몸이 청춘을 무엇이 방황하여도, 용기가 가장 있다. 인간이 같은 그들은 약동하다. 황금시대를 기쁘며, 황금시대의 군영과 곧 없으면, 끓는다. 하는 관현악이며, 공자는 미묘한 새 두기 타오르고 끓는다.
+
+            </p>
+            <p>
+                청춘의 봄바람을 같이, 불어 끓는 곳이 속에 이것을 바로 황금시대다. 날카로우나 풍부하게 예수는 몸이 청춘을 무엇이 방황하여도, 용기가 가장 있다. 인간이 같은 그들은 약동하다. 황금시대를 기쁘며, 황금시대의 군영과 곧 없으면, 끓는다. 하는 관현악이며, 공자는 미묘한 새 두기 타오르고 끓는다.
+
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        <h2>FOOTER</h2>
+    </footer>
+</body>
+</html>
